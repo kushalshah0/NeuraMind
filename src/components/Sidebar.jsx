@@ -63,7 +63,9 @@ const Sidebar = ({
   const [exportingChatId, setExportingChatId] = useState(null);
 
   const handleSaveSettings = () => {
-    onApiUrlChange(tempApiUrl);
+    // Remove trailing slash from API URL if present
+    const cleanUrl = tempApiUrl.trim().replace(/\/+$/, '');
+    onApiUrlChange(cleanUrl);
     setShowSettings(false);
   };
 
