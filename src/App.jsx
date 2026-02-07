@@ -257,7 +257,8 @@ function App() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'qwen2.5-coder:7b-instruct-q4_K_M',
+          // model: 'qwen2.5-coder:7b-instruct-q4_K_M',
+          model: 'qwen2.5-coder:14b',
           prompt: userMessage,
           stream: false,
         }),
